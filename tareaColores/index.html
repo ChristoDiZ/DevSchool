@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900 text-white">
+    <div class=" text-center mt-10">
+        <h2 class="text-5xl font-mono ">Color Picker</h2>
+        <input class="w-96 h-10 my-4 border-2  rounded-md" type="color" name="" id="inputColor">
+        <button id="boton" class="bg-blue-500 p-2 rounded-lg flex mx-auto
+        cursor-pointer hover:bg-blue-400 font-semibold transition delay-50">Visualizar</button>
+        <p class="my-4" id="textoHexa">#0000</p>
+        <div id="cardColor" class="w-96 h-20 bg-blue-500 rounded-lg mx-auto
+        border-2"></div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
