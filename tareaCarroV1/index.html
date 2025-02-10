@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Frutas</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-r from-green-300 via-lime-200 to-yellow-300 min-h-screen flex flex-col items-center">
+    
+    <h1 class="text-4xl font-bold text-white mt-6">Tienda de Frutas</h1>
+    
+    <!-- Grid de productos -->
+    <div class="grid md:grid-cols-3 gap-6 mt-10 px-4">
+        <!-- Tarjeta de Fruta -->
+        <div class="bg-white shadow-md border border-gray-200 rounded-lg p-5 w-60 text-center hover:shadow-2xl">
+            <img src="img/fresa.png" class="w-24 mx-auto" alt="Frutilla">
+            <h2 class="text-xl font-semibold mt-3">Frutilla</h2>
+            <p class="text-lg text-gray-600">$1000</p>
+            <button class="mt-3 bg-lime-500 text-white font-semibold px-4 py-2 rounded-lg w-full hover:bg-lime-600 transition cursor-pointer"
+                data-fruta="frutilla" data-precio="1000" data-imagen="fresa.png">
+                Agregar al carrito
+            </button>
+        </div>
+        
+        <div class="bg-white shadow-md border border-gray-200 rounded-lg p-5 w-60 text-center hover:shadow-2xl">
+            <img src="img/pera.png" class="w-24 mx-auto" alt="Pera">
+            <h2 class="text-xl font-semibold mt-3">Pera</h2>
+            <p class="text-lg text-gray-600">$900</p>
+            <button class="mt-3 bg-lime-500 text-white font-semibold px-4 py-2 rounded-lg w-full hover:bg-lime-600 transition cursor-pointer"
+                data-fruta="pera" data-precio="900" data-imagen="pera.png">
+                Agregar al carrito
+            </button>
+        </div>
+        
+        <div class="bg-white shadow-md border border-gray-200 rounded-lg p-5 w-60 text-center hover:shadow-2xl">
+            <img src="img/naranja.png" class="w-24 mx-auto" alt="Naranja">
+            <h2 class="text-xl font-semibold mt-3">Naranja</h2>
+            <p class="text-lg text-gray-600">$800</p>
+            <button class="mt-3 bg-lime-500 text-white font-semibold px-4 py-2 rounded-lg w-full hover:bg-lime-600 transition cursor-pointer"
+                data-fruta="naranja" data-precio="800" data-imagen="naranja.png">
+                Agregar al carrito
+            </button>
+        </div>
+    </div>
+    
+    <!-- Carrito -->
+    <div class="container mx-auto mt-6 w-3/4 bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Carrito de Compras</h2>
+        <ul id="contenedor" class="divide-y divide-gray-200">
+            <!-- Aquí irán los elementos del carrito -->
+        </ul>
+    </div>
+    
+    <!-- Template -->
+    <template id="template">
+        <li class="flex justify-between items-center py-3">
+            <div class="flex items-center space-x-3">
+                <img class="w-10" src="" alt="">
+                <span class="text-lg font-medium" id="fruta">Fruta</span>
+                <span class="text-gray-600" id="precio">$1000</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-lg font-medium" id="cantidad">1</span>
+                <button class="bg-lime-500 text-white px-2 py-1 rounded-full cursor-pointer font-bold" id="sumar">+</button>
+                <button class="bg-red-500 text-white px-3 py-1 rounded-full cursor-pointer font-bold" id="restar">-</button>
+            </div>
+        </li>
+    </template>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>
