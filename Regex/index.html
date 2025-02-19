@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Formulario</title>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <form class="bg-gray-800 p-6 rounded-lg shadow-lg w-96" id="formulario">
+        <h1 class="text-3xl text-center font-bold mb-6">Formulario</h1>
+
+        <!-- Nombre -->
+        <div class="mb-4">
+            <label for="nombre" class="block font-semibold">Nombre</label>
+            <input class="w-full bg-gray-200 text-black rounded-md px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-lime-400"
+                   type="text" id="nombre" value="Christopher">
+            <p id="alertaNombre" class="bg-red-500 text-white text-sm mt-2 p-2 rounded-md hidden"></p>
+        </div>
+
+        <!-- Correo -->
+        <div class="mb-4">
+            <label for="correo" class="block font-semibold">Correo</label>
+            <input class="w-full bg-gray-200 text-black rounded-md px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-lime-400"
+                   type="text" id="correo" value="Christopher@gmail.com">
+            <p id="alertaCorreo" class="bg-red-500 text-white text-sm mt-2 p-2 rounded-md hidden"></p>
+        </div>
+
+        <!-- Botón Enviar -->
+        <button class="w-full bg-lime-500 text-black font-bold py-2 rounded-md cursor-pointer hover:bg-lime-400 transition duration-300 hover:scale-102">
+            Enviar
+        </button>
+
+        <!-- Mensaje de éxito -->
+        <p id="alertaEnviado" class="bg-green-500 text-white text-sm mt-4 p-2 rounded-md hidden text-center"></p>
+    </form>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
